@@ -5,7 +5,7 @@ lista=[1,2,3,4,5,6,7,8,9]
 def prvi_unos():
     z=""
     while z!="X" and z!="O":
-        z=input("\nМолим вас унесите \"X\" или \"O\": \n")
+        z=input("\nМолим вас унесите \"X\" или \"O\": \n").upper()
     return z
     
 def naizmenicno(h):
@@ -32,6 +32,17 @@ def tri_ista(lista, odabrani_element):
         return print(f"Победник је играч који је одабрао ознаку: {odabrani_element}"), sys.exit()
     if lista[2] == lista[4] == lista[6]:
         return print(f"Победник је играч који је одабрао ознаку: {odabrani_element}"), sys.exit()
+
+def nereseno(lista):
+    k=0
+    lista2=[]
+    for i in lista:
+        if i=="X" or i=="O":
+            lista2.append("O")
+    if len(lista2)==9:
+            print("Нерешено!"), sys.exit()
+
+    
 
 def pozicija_iscrtavanje(lista, odabrani_element):
         
@@ -67,6 +78,7 @@ def pozicija_iscrtavanje(lista, odabrani_element):
                             print("#", end="|")
                 print()
                 tri_ista(lista, odabrani_element)
+                nereseno(lista)
                 return lista, odabrani_element
         elif k==2 and lista[k-1]!="X" and lista[k-1]!="O":
                 lista[k-1]=odabrani_element
@@ -85,7 +97,8 @@ def pozicija_iscrtavanje(lista, odabrani_element):
                         else:
                             print("#", end="|")
                 print()
-                tri_ista(lista, odabrani_element)            
+                tri_ista(lista, odabrani_element)  
+                nereseno(lista)        
                 return lista, odabrani_element
         elif k==3 and lista[k-1]!="X" and lista[k-1]!="O":
                 lista[k-1]=odabrani_element
@@ -104,7 +117,8 @@ def pozicija_iscrtavanje(lista, odabrani_element):
                         else:
                             print("#", end="|")
                 print()
-                tri_ista(lista, odabrani_element)            
+                tri_ista(lista, odabrani_element)
+                nereseno(lista)          
                 return lista, odabrani_element
         elif k==4 and lista[k-1]!="X" and lista[k-1]!="O":
                 lista[k-1]=odabrani_element
@@ -123,7 +137,8 @@ def pozicija_iscrtavanje(lista, odabrani_element):
                         else:
                             print("#", end="|")
                 print()
-                tri_ista(lista, odabrani_element)            
+                tri_ista(lista, odabrani_element)   
+                nereseno(lista)         
                 return lista, odabrani_element
         elif k==5 and lista[k-1]!="X" and lista[k-1]!="O":
                 lista[k-1]=odabrani_element
@@ -142,7 +157,8 @@ def pozicija_iscrtavanje(lista, odabrani_element):
                         else:
                             print("#", end="|")
                 print()
-                tri_ista(lista, odabrani_element)            
+                tri_ista(lista, odabrani_element) 
+                nereseno(lista)           
                 return lista, odabrani_element
         elif k==6 and lista[k-1]!="X" and lista[k-1]!="O":
                 lista[k-1]=odabrani_element
@@ -161,7 +177,8 @@ def pozicija_iscrtavanje(lista, odabrani_element):
                         else:
                             print("#", end="|")
                 print()
-                tri_ista(lista, odabrani_element)            
+                tri_ista(lista, odabrani_element)
+                nereseno(lista)           
                 return lista, odabrani_element
         elif k==7 and lista[k-1]!="X" and lista[k-1]!="O":
                 lista[k-1]=odabrani_element
@@ -180,7 +197,8 @@ def pozicija_iscrtavanje(lista, odabrani_element):
                         else:
                             print("#", end="|")
                 print()
-                tri_ista(lista, odabrani_element)            
+                tri_ista(lista, odabrani_element)
+                nereseno(lista)            
                 return lista, odabrani_element
         elif k==8 and lista[k-1]!="X" and lista[k-1]!="O":
                 lista[k-1]=odabrani_element
@@ -199,7 +217,8 @@ def pozicija_iscrtavanje(lista, odabrani_element):
                         else:
                             print("#", end="|")
                 print()
-                tri_ista(lista, odabrani_element)            
+                tri_ista(lista, odabrani_element) 
+                nereseno(lista)          
                 return lista, odabrani_element
         elif k==9 and lista[k-1]!="X" and lista[k-1]!="O":
                 lista[k-1]=odabrani_element
@@ -218,7 +237,8 @@ def pozicija_iscrtavanje(lista, odabrani_element):
                         else:
                             print("#", end="|")
                 print()
-                tri_ista(lista, odabrani_element)            
+                tri_ista(lista, odabrani_element)
+                nereseno(lista)           
                 return lista, odabrani_element
         
 
